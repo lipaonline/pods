@@ -1222,6 +1222,8 @@ class PodsInit {
             'PodsWidgetForm',
             'PodsWidgetView'
         );
+        
+        $widgets = apply_filters( 'podsUI_widgets', $widgets );
 
         foreach ( $widgets as $widget ) {
             if ( !file_exists( PODS_DIR . 'classes/widgets/' . $widget . '.php' ) )
